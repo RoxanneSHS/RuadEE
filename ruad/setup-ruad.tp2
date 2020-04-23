@@ -1,0 +1,369 @@
+BACKUP ~ruad/backup~
+AUTHOR ~moonfruit@webonline.co.za~
+
+VERSION ~v30~
+
+AUTO_TRA ~ruad\%s~
+
+ALWAYS
+  ACTION_IF GAME_IS ~eet~ BEGIN
+    OUTER_SET bg2_chapter = 12
+  END ELSE BEGIN
+    OUTER_SET bg2_chapter = 0
+  END
+  OUTER_FOR (i=1; i<=10; i=i+1) BEGIN
+    OUTER_SET bg2_chapter = bg2_chapter + 1
+    OUTER_SPRINT name_source ~bg2_chapter_%i%~
+    OUTER_SET EVAL ~%name_source%~ = bg2_chapter
+  END
+END
+
+LANGUAGE ~American English~
+         ~american~
+         ~ruad/american/setup.tra~
+         ~ruad/american/titles.tra~
+
+LANGUAGE ~Russian (by Aerie.ru)~
+         ~russian~
+         ~ruad/russian/setup.tra~
+         ~ruad/russian/titles.tra~
+
+
+///////////////////////////////////////////////////////////////////////
+// Ruad Ro'fhessa (SoA)
+///////////////////////////////////////////////////////////////////////
+
+BEGIN @1001
+
+COPY    ~ruad/bam~                      ~override~
+        ~ruad/ruad/m#ruads.bmp~         ~override/m#ruads.bmp~
+
+COPY	~ruad/itm/u#sw1h01.itm~         ~override/u#sw1h01.itm~  // Blade of the Red Rose +4
+	SAY NAME2 @6001 SAY DESC @6002
+	WRITE_ASCII   0x3a "u#sw1h01"
+	WRITE_ASCII   0x76 "u#sw1h01"
+
+COPY	~ruad/itm/u#sw1h02.itm~		~override/u#sw1h02.itm~  // The Dancing Couple's Sword
+	SAY NAME2 @6003 SAY DESC @6004
+	WRITE_ASCII   0x3a "u#sw1h02"
+	WRITE_ASCII   0x76 "u#sw1h02"
+	WRITE_ASCII   0xae "u#sw1h02"
+	WRITE_ASCII   0x21e "u#sw1h02"
+
+COPY    ~ruad/res/u#sw1h02.cre~         ~override/u#sw1h02.cre~  // The Mirror Dancing Sword
+        SAY NAME1 @2002 SAY NAME2 @2002
+
+COPY	~ruad/res/u#s1h02a.itm~		~override/u#s1h02a.itm~  // The Mirror Dancing Sword's weapon
+	SAY NAME2 @6003 SAY DESC @6004
+	WRITE_ASCII   0x3a "u#sw1h02"
+	WRITE_ASCII   0x76 "u#sw1h02"
+
+COPY	~ruad/itm/u#sw1h03.itm~		~override/u#sw1h03.itm~  // Vampire's Revenge +2
+	SAY NAME2 @6005 SAY DESC @6006
+	WRITE_ASCII   0x3a "u#sw1h03"
+	WRITE_ASCII   0x76 "u#sw1h03"
+
+COPY	~ruad/itm/u#sw1h04.itm~		~override/u#sw1h04.itm~  // Black Sword of Undeath
+	SAY NAME2 @6007 SAY DESC @6008
+	WRITE_ASCII   0x3a "u#sw1h04"
+	WRITE_ASCII   0x76 "u#sw1h04"
+	WRITE_ASCII   0xae "u#sw1h04"
+	WRITE_ASCII   0x876 "u#sw1h04"
+
+COPY    ~ruad/res/u#s1h04a.cre~         ~override/u#sw1h04.cre~  // Kraka'Tur (No Whirlwind)
+        SAY NAME1 @2003 SAY NAME2 @2003
+
+COPY	~ruad/itm/u#sw1h05.itm~         ~override/u#sw1h05.itm~  // Yoshimo's Poisoned Katana +3
+	SAY NAME2 @6009 SAY DESC @6010
+	WRITE_ASCII   0x3a "u#sw1h05"
+	WRITE_ASCII   0x76 "u#sw1h05"
+
+COPY	~ruad/itm/u#misc01.itm~         ~override/u#misc01.itm~  // Spirit of Yoshimo
+	SAY NAME2 @6011 SAY DESC @6012
+	WRITE_ASCII   0x3a "u#mis01a"
+	WRITE_ASCII   0x76 "u#mis01a"
+	WRITE_ASCII   0xbe "u#misc01"
+	WRITE_ASCII   0x58 "u#mis01b"
+
+COPY    ~ruad/res/u#misc01.cre~         ~override/u#misc01.cre~  // Yoshimo's Spirit
+        SAY NAME1 @2004 SAY NAME2 @2004
+
+COPY	~ruad/res/u#s1h05a.itm~         ~override/u#s1h05a.itm~  // Yoshimo's Spirit weapon
+	SAY NAME2 @6009 SAY DESC @6010
+	WRITE_ASCII   0x3a "u#sw1h05"
+	WRITE_ASCII   0x76 "u#sw1h05"
+
+COPY    ~ruad/itm/u#boot01.itm~         ~override/u#boot01.itm~  // Dragon Slippers
+        SAY NAME2 @6013 SAY DESC @6014
+        WRITE_ASCII 0x3a "u#boot01"
+
+COPY    ~ruad/itm/u#ring01.itm~         ~override/u#ring01.itm~  // Ring of Abjuration
+        SAY NAME2 @6015 SAY DESC @6016
+        WRITE_ASCII 0x3a "u#ring01"
+
+COPY    ~ruad/itm/u#ring02.itm~         ~override/u#ring02.itm~  // Ring of Alteration
+        SAY NAME2 @6017 SAY DESC @6018
+        WRITE_ASCII 0x3a "u#ring02"
+
+COPY    ~ruad/itm/u#ring03.itm~         ~override/u#ring03.itm~  // Ring of Conjuration
+        SAY NAME2 @6019 SAY DESC @6020
+        WRITE_ASCII 0x3a "u#ring03"
+
+COPY    ~ruad/itm/u#ring04.itm~         ~override/u#ring04.itm~  // Ring of Divination
+        SAY NAME2 @6021 SAY DESC @6022
+        WRITE_ASCII 0x3a "u#ring04"
+
+COPY    ~ruad/itm/u#ring05.itm~         ~override/u#ring05.itm~  // Ring of Enchantment
+        SAY NAME2 @6023 SAY DESC @6024
+        WRITE_ASCII 0x3a "u#ring05"
+
+COPY    ~ruad/itm/u#ring06.itm~         ~override/u#ring06.itm~  // Ring of Evocation
+        SAY NAME2 @6025 SAY DESC @6026
+        WRITE_ASCII 0x3a "u#ring06"
+
+COPY    ~ruad/itm/u#ring07.itm~         ~override/u#ring07.itm~  // Ring of Illusion
+        SAY NAME2 @6027 SAY DESC @6028
+        WRITE_ASCII 0x3a "u#ring07"
+
+COPY    ~ruad/itm/u#ring08.itm~         ~override/u#ring08.itm~  // Ring of Necromancy
+        SAY NAME2 @6029 SAY DESC @6030
+        WRITE_ASCII 0x3a "u#ring08"
+
+COPY    ~ruad/itm/u#chan01.itm~         ~override/u#chan01.itm~  // Adamantine Chain
+        SAY NAME2 @6031 SAY DESC @6032
+        WRITE_ASCII 0x3a "u#chan01"
+
+COPY    ~ruad/itm/u#belt01.itm~         ~override/u#belt01.itm~  // Warlord's Girdle
+        SAY NAME2 @6033 SAY DESC @6034
+        WRITE_ASCII 0x3a "u#belt01"
+
+COPY    ~ruad/itm/u#amul01.itm~         ~override/u#amul01.itm~  // Kaligun's Amulet of Greater Resistance
+        SAY NAME2 @6035 SAY DESC @6036
+        WRITE_ASCII 0x3a "u#amul01"
+
+COPY    ~ruad/itm/u#amul02.itm~         ~override/u#amul02.itm~  // Upgraded Harper Pin
+        SAY NAME2 @6039 SAY DESC @6040
+        WRITE_ASCII 0x3a "u#amul02"
+
+COPY	~ruad/itm/u#ax1h01.itm~         ~override/u#ax1h01.itm~  // Frostfury +4
+	SAY NAME2 @6041 SAY DESC @6042
+	WRITE_ASCII   0x3a "u#ax1h01"
+	WRITE_ASCII   0x76 "u#ax1h01"
+
+COPY	~ruad/itm/u#wand01.itm~         ~override/u#wand01.itm~  // Wand of Hard Knocks
+	SAY NAME2 @6043 SAY DESC @6044
+	WRITE_ASCII   0x3a "u#wand01"
+	WRITE_ASCII   0x76 "u#wand01"
+
+COPY	~ruad/itm/u#ax2h01.itm~         ~override/u#ax2h01.itm~  // Messerschmitt Stone Reaver Axe
+	SAY NAME2 @6045 SAY DESC @6046
+	WRITE_ASCII   0x3a "u#ax2h01"
+	WRITE_ASCII   0x76 "u#ax2h01"
+
+COPY	~ruad/itm/u#staf01.itm~         ~override/u#staf01.itm~  // The Ugly Stick
+	SAY NAME2 @6051 SAY DESC @6052
+	WRITE_ASCII   0x3a "u#staf01"
+	WRITE_ASCII   0x76 "u#staf01"
+	WRITE_ASCII   0xae "u#staf01"
+
+COPY	~ruad/itm/u#plat01.itm~         ~override/u#plat01.itm~  // Adamantine Plate
+	SAY NAME2 @6053 SAY DESC @6054
+	WRITE_ASCII   0x3a "u#plat01"
+
+COPY	~ruad/itm/u#clck01.itm~         ~override/u#clck01.itm~  // Cloak of the Elemental Star
+	SAY NAME2 @6055 SAY DESC @6056
+	WRITE_ASCII   0x3a "u#clck01"
+	WRITE_ASCII   0x76 "u#clck01"
+	WRITE_ASCII   0x1de "u#clk01a"
+
+COPY	~ruad/res/u#clk01a.itm~         ~override/u#clk01a.itm~  // Darts for Cloak of the Elemental Star
+	SAY NAME2 @7001 SAY DESC @7002
+	WRITE_ASCII   0x3a "u#clk01a"
+	WRITE_ASCII   0x76 "u#clk01a"
+
+COPY	~ruad/itm/u#clck02.itm~         ~override/u#clck02.itm~  // Cloak of the Shadow
+	SAY NAME2 @6065 SAY DESC @6066
+
+COPY	~ruad/itm/u#leat01.itm~         ~override/u#leat01.itm~  // Pikim's Armor
+	SAY NAME2 @6067 SAY DESC @6068
+
+COPY	~ruad/itm/u#dagg01.itm~         ~override/u#dagg01.itm~  // Neb's Nasty Cutter
+	SAY NAME2 @6069 SAY DESC @6070
+	WRITE_ASCII   0x3a "u#dagg01"
+	WRITE_ASCII   0x76 "u#dagg01"
+	WRITE_ASCII   0x1e6 "u#dagg01"
+
+COPY    ~ruad/res/u#dagg01.cre~          ~override/u#dagg01.cre~ // Restless Child Spirit
+        SAY NAME1 @2005 SAY NAME2 @2005
+
+COPY	~ruad/itm/u#sw1h08.itm~         ~override/u#sw1h08.itm~  // Shadow Thief's Blade
+	SAY NAME2 @6071 SAY DESC @6072
+	WRITE_ASCII   0x3a "u#sw1h08"
+	WRITE_ASCII   0x76 "u#sw1h08"
+
+COPY	~ruad/itm/u#bow01.itm~          ~override/u#bow01.itm~   // Enchanted Bow of Arvoreen
+	SAY NAME2 @6073 SAY DESC @6074
+	WRITE_ASCII   0x3a "u#bow01"
+	WRITE_ASCII   0x76 "u#bow01"
+
+COPY	~ruad/itm/u#robe01.itm~         ~override/u#robe01.itm~  // Robe of Resistance
+	SAY NAME2 @6081 SAY DESC @6082
+	WRITE_ASCII   0x3a "u#robe01"
+
+COPY	~ruad/itm/u#halb01.itm~         ~override/u#halb01.itm~  // Dragon's Tooth
+	SAY NAME2 @6083 SAY DESC @6084
+	WRITE_ASCII   0x3a "u#halb01"
+	WRITE_ASCII   0x76 "u#halb01"
+
+COPY	~ruad/itm/u#clck03.itm~         ~override/u#clck03.itm~  // Cloak of Thay
+	SAY NAME2 @6085 SAY DESC @6086
+
+COPY	~ruad/itm/u#clck04.itm~         ~override/u#clck04.itm~  // Nature's Cloak
+	SAY NAME2 @6087 SAY DESC @6088
+	WRITE_ASCII   0x3a "u#clck04"
+
+COPY	~ruad/itm/u#staf02.itm~         ~override/u#staf02.itm~  // Nature's Staff
+	SAY NAME2 @6091 SAY DESC @6092
+	WRITE_ASCII   0x3a "u#staf02"
+	WRITE_ASCII   0x76 "u#staf02"
+
+COPY	~ruad/itm/u#staf03.itm~         ~override/u#staf03.itm~  // Staff of Many Magicks
+	SAY NAME2 @6093 SAY DESC @6094
+	WRITE_ASCII   0x3a "u#staf03"
+	WRITE_ASCII   0x76 "u#staf03"
+
+COPY	~ruad/itm/u#blun01.itm~         ~override/u#blun01.itm~  // The Drowsy Wyvern
+	SAY NAME2 @6095 SAY DESC @6096
+	WRITE_ASCII   0x3a "u#blun01"
+	WRITE_ASCII   0x76 "u#blun01"
+
+COPY	~ruad/res/u#blun01.eff~         ~override/u#blun01.eff~  // The Drowsy Wyvern sleep effect
+
+COPY	~ruad/itm/u#clck05.itm~         ~override/u#clck05.itm~  // Cloak of the Shark Father
+	SAY NAME2 @6099 SAY DESC @6100
+	WRITE_ASCII   0x3a "u#clck05"
+	WRITE_ASCII   0x76 "u#clck05"
+	
+COPY	~ruad/res/u#clck05.cre~         ~override/u#clck05.cre~  // Anguiliian
+
+COPY	~ruad/itm/u#brac02.itm~         ~override/u#brac02.itm~  // Fluent Fingers
+	SAY NAME2 @6101 SAY DESC @6102
+	WRITE_ASCII   0x3a "u#brac02"
+	
+COPY	~ruad/itm/u#ring09.itm~         ~override/u#ring09.itm~  // Ring of the Thief
+	SAY NAME2 @6103 SAY DESC @6104
+	WRITE_ASCII   0x3a "u#ring09"
+	
+COPY	~ruad/itm/u#brac03.itm~         ~override/u#brac03.itm~  // Gauntlets of Assassination
+	SAY NAME2 @6105 SAY DESC @6106
+	WRITE_ASCII   0x3a "u#brac03"
+	
+COPY	~ruad/itm/u#sw1h09.itm~         ~override/u#sw1h09.itm~  // Kiss of Death
+	SAY NAME2 @6107 SAY DESC @6108
+	WRITE_ASCII   0x3a "u#sw1h09"
+	WRITE_ASCII   0x76 "u#sw1h09"
+	
+COPY	~ruad/itm/u#leat02.itm~         ~override/u#leat02.itm~  // Hide of Shades
+	SAY NAME2 @6109 SAY DESC @6110
+	WRITE_ASCII   0x3a "u#leat02"
+	
+COPY	~ruad/itm/u#sw2h02.itm~         ~override/u#sw2h02.itm~  // Lava's Bane
+	SAY NAME2 @6111 SAY DESC @6112
+	
+COPY	~ruad/res/u#sw2h21.eff~         ~override~               // Lava's Bane effects
+	~ruad/res/u#sw2h22.eff~         ~override~
+	~ruad/res/u#sw2h23.eff~         ~override~
+	~ruad/res/u#sw2h24.eff~         ~override~
+
+COPY	~ruad/itm/u#blun03.itm~         ~override/u#blun03.itm~  // Wooden Stake
+	SAY NAME2 @6113 SAY DESC @6114
+
+COPY	~ruad/res/u#blun31.eff~         ~override~               // Wooden Stake effects
+	~ruad/res/u#blun32.eff~         ~override~
+
+COPY	~ruad/itm/u#bow02.itm~         ~override/u#bow02.itm~    // Bow of Uden
+	SAY NAME2 @6115 SAY DESC @6116
+
+COPY	~ruad/itm/u#staf04.itm~         ~override/u#staf04.itm~  // Staff of Resurrection
+	SAY NAME2 @6117 SAY DESC @6118
+	
+COPY	~ruad/itm/u#ring10.itm~         ~override/u#ring10.itm~  // Ring of Time Control
+	SAY NAME2 @6119 SAY DESC @6120
+
+COPY    ~ruad/ruad/m#ruad.cre~          ~override/m#ruad.cre~
+        SAY NAME1 @2001 SAY NAME2 @2001
+
+EXTEND_TOP ~ar0700.bcs~                 ~ruad/ruad/soaruad.baf~  EVALUATE_BUFFER
+
+COMPILE EVALUATE_BUFFER~ruad/ruad/ruad.d~
+	~ruad/ruad/m#ruad.baf~       
+  USING ~ruad/%s/ruad.tra~
+
+///////////////////////////////////////////////////////////////////////
+// Ruad Ro'fhessa (ToB)
+///////////////////////////////////////////////////////////////////////
+
+BEGIN @1002
+
+ACTION_IF NOT FILE_EXISTS ~Data/25Dialog.bif~ THEN BEGIN
+  PRINT @1101
+END ELSE BEGIN
+
+COPY    ~ruad/res/u#s1h04b.cre~         ~override/u#sw1h04.cre~  // Kraka'Tur (Whirlwind)
+        SAY NAME1 @2003 SAY NAME2 @2003
+
+COPY    ~ruad/itm/u#helm01.itm~         ~override/u#helm01.itm~  // Incandescent Ioun Stone
+        SAY NAME2 @6037 SAY DESC @6038
+        WRITE_ASCII 0x3a "u#helm01"
+
+COPY	~ruad/itm/u#sw1h06.itm~         ~override/u#sw1h06.itm~  // Corthala Family Blade +3
+	SAY NAME2 @6047 SAY DESC @6048
+	WRITE_ASCII   0x3a "u#sw1h06"
+	WRITE_ASCII   0x76 "u#sw1h06"
+
+COPY	~ruad/itm/u#sw1h07.itm~         ~override/u#sw1h07.itm~  // Corthala Family Blade +4
+	SAY NAME2 @6049 SAY DESC @6050
+	WRITE_ASCII   0x3a "u#sw1h07"
+	WRITE_ASCII   0x76 "u#sw1h07"
+
+COPY	~ruad/itm/u#dart01.itm~         ~override/u#dart01.itm~  // Crimson Flame Dart
+	SAY NAME2 @6057 SAY DESC @6058
+	WRITE_ASCII   0x3a "u#dart01"
+	WRITE_ASCII   0x76 "u#dart01"
+
+COPY	~ruad/itm/u#helm02.itm~         ~override/u#helm02.itm~  // Chaos Stone
+	SAY NAME2 @6059 SAY DESC @6060
+	WRITE_ASCII   0x3a "u#helm02"
+
+COPY	~ruad/itm/u#helm03.itm~         ~override/u#helm03.itm~  // Improved Chaos Stone
+	SAY NAME2 @6061 SAY DESC @6062
+	WRITE_ASCII   0x3a "u#helm03"
+
+COPY	~ruad/itm/u#sw2h01.itm~         ~override/u#sw2h01.itm~  // Undead Bane
+	SAY NAME2 @6063 SAY DESC @6064
+	WRITE_ASCII   0x3a "u#sw2h01"
+	WRITE_ASCII   0x76 "u#sw2h01"
+
+COPY	~ruad/itm/u#plat02.itm~         ~override/u#plat02.itm~  // Plate of Many Dragons
+	SAY NAME2 @6075 SAY DESC @6076
+	WRITE_ASCII   0x3a "u#plat02"
+
+COPY	~ruad/itm/u#helm04.itm~         ~override/u#helm04.itm~  // Helm of Many Dragons
+	SAY NAME2 @6077 SAY DESC @6078
+	WRITE_ASCII   0x3a "u#helm04"
+
+COPY	~ruad/itm/u#shld01.itm~         ~override/u#shld01.itm~  // Shield of Many Dragons
+	SAY NAME2 @6079 SAY DESC @6080
+	WRITE_ASCII   0x3a "u#shld01"
+
+COPY	~ruad/itm/u#brac01.itm~         ~override/u#brac01.itm~  // Mits of Shaiman
+	SAY NAME2 @6089 SAY DESC @6090
+	WRITE_ASCII   0x3a "u#brac01"
+
+COPY	~ruad/itm/u#blun02.itm~         ~override/u#blun02.itm~  // Cold Shoulder
+	SAY NAME2 @6097 SAY DESC @6098
+	WRITE_ASCII   0x3a "u#blun02"
+
+EXTEND_TOP ~ar4500.bcs~                 ~ruad/ruad/tobruad.baf~ EVALUATE_BUFFER
+
+END

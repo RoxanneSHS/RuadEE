@@ -1,0 +1,10 @@
+IF
+  GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)
+  !Dead("Ruad")
+  Global("W#MakeRuad","MYAREA",0)
+THEN
+  RESPONSE #100
+    CreateCreature("m#ruad",[2250.1350],5)
+    SetGlobal("W#MakeRuad","MYAREA",1)
+    Continue()
+END
